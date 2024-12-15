@@ -9,18 +9,17 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
 
-// Material Dashboard 2 React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 
 function Notifications() {
-  const [response, setResponse] = useState(""); // State to hold the response from OpenAI
-  const [loading, setLoading] = useState(false); // State to show loading status
+  const [response, setResponse] = useState(""); 
+  const [loading, setLoading] = useState(false); 
 
   const openWarningSB = async () => {
-    setLoading(true); // Start loading
+    setLoading(true); 
     try {
-      // Sending a request to the OpenAI API for code evaluation
+      
       const result = await axios.post(
         "https://api.openai.com/v1/chat/completions",
         {
@@ -51,7 +50,7 @@ df.descr...() #continue this code`,
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: "Bearer YOUR_API_KEY_HERE",
+           Authorization:    "Bearer myopenai api key cant put it here",
           },
         }
       );
@@ -61,15 +60,12 @@ df.descr...() #continue this code`,
     } catch (error) {
       console.error("Error making request to OpenAI:", error);
 
-      // Provide a default evaluation if no response
-      setResponse(
-        "Code evaluation: 3/10. The code is incomplete and contains syntax errors, such as missing imports and incorrect method calls."
-      );
+     
     } finally {
-      setLoading(false); // Stop loading
+      setLoading(false); 
     }
   };
-
+//example of mission , they would be prepared by experts 
   const initialCode = `
 # Step 1: Import the necessary libraries
 # You need to import the pandas library for data manipulation and cleaning.
