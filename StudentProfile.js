@@ -1,6 +1,6 @@
 import React from "react";
-import MDBox from "components/MDBox"; // Assuming you are using Material Dashboard components
-import MDTypography from "components/MDTypography"; // Assuming you are using Material Dashboard Typography
+import MDBox from "components/MDBox"; 
+import MDTypography from "components/MDTypography"; 
 import im from "./imgg.png";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
@@ -11,12 +11,12 @@ const skillData = {
   datasets: [
     {
       label: "Skill Levels",
-      data: [70, 50, 80, 60], // Replace these with actual skill levels
+      data: [70, 50, 80, 60], 
       backgroundColor: [
-        "#36A2EB", // Front-end
-        "#FF6384", // Back-end
-        "#FFCE56", // Entrepreneurship
-        "#4BC0C0", // Other Skills
+        "#36A2EB", 
+        "#FF6384", 
+        "#FFCE56", 
+        "#4BC0C0", 
       ],
       hoverBackgroundColor: ["#36A2EB", "#FF6384", "#FFCE56", "#4BC0C0"],
     },
